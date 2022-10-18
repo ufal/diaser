@@ -138,8 +138,11 @@ class Dialogue:
             self._data['utterances'][int(tid)].extend_nlu(act)
 
     def extend_goal(self, goal):
-        goal = goal['goal']
+        if 'goal' in goal:
+            goal = goal['goal']
         used_domains = {domain: goal for domain, domain_goal in goal.items() if domain != 'message' and len(domain_goal) > 0}
+        if isinstance(goal['message'], list):
+            goal['message'] = goal['message'][0]
         message = re.sub(TAG_RE, '', goal['message'])
         self._data['goal'] = goal
 
