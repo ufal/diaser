@@ -9,7 +9,7 @@ MULTIWOZ_ROOT=${SOURCE_ROOT}/multiwoz/data/MultiWOZ_2.2/
 SCHEMA_ROOT=${SOURCE_ROOT}/dstc8-schema-guided-dialogue
 # path to the directory that contains combined DSTC2 and CamRest676 data and corresponding database
 DSCR_ROOT=${SOURCE_ROOT}/dscr
-# path to the directory thaht contains the data for onthology unification across all the datasets
+# path to the directory thaht contains the data for ontology unification across all the datasets
 ONTGY_ROOT=data
 # output directory that contains the compiled dataset
 OUT_DIR=diaser-data
