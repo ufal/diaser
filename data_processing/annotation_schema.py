@@ -142,7 +142,7 @@ class Dialogue:
             goal = goal['goal']
         used_domains = {domain: goal for domain, domain_goal in goal.items() if domain != 'message' and len(domain_goal) > 0}
         if isinstance(goal['message'], list):
-            goal['message'] = goal['message'][0]
+            goal['message'] = ' '.join(goal['message'])
         message = re.sub(TAG_RE, '', goal['message'])
         self._data['goal'] = goal
 
