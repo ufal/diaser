@@ -1522,7 +1522,9 @@ def main():
     cpt = 0
     
     for splitt in splitter:
-        sgd = glob('../../source_diaser_data/dscr/dstccamrest.json')
+        # sgd = glob('../../sgd/' + splitt + '/dialog*')
+        sgd = glob('../datasets/dstccamrest.json')
+        # glob('../../sgd/' + splitt + '/dialog*')#
         cpt = parse_sgd(sgd, dbs, ontology, cpt, locations, cities, areas, mapper)
         json.dump(sgd, fp=open(f'../data/new_{splitt}mwoz.json', 'w'), indent=4)
     json.dump(dbs, fp=open('../data/mwoz_db.json', 'w'), indent=4)
